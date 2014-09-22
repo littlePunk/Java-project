@@ -1,0 +1,15 @@
+package com.designpatterns.observerpatterns.test1;
+
+public class WeatherStation {
+	public static void main(String[] args) {
+		WeatherData weatherData = new WeatherData();
+		//在构造函数中注册为观察者
+		CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(
+				weatherData);
+		
+		weatherData.setMeaurements(80, 65, 30.4f);
+		weatherData.setMeaurements(82, 70, 29.2f);
+		weatherData.setMeaurements(78, 90, 29.2f);
+
+	}
+}
